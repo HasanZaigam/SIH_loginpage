@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set a base font size and family */
+        body {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            background-color: #f0f0f0; /* Light gray background color */
+        }
+
+        /* Center the content vertically and horizontally */
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Apply the color scheme */
+        .login-container {
+            background-color: #FFBB5C;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .login-form {
+            padding: 10%;
+        }
+
+        /* Form styles */
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #C63D2F;
+            border-radius: 5px;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #FF9B50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #E25E3E;
+        }
+
+        .text-center{
+          display: flex;
+          justify-content: center;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .center-content {
+                flex-direction: column;
+            }
+
+            .login-container {
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="center-content">
+    <div class="login-container">
+        <div class="login-form">
+            <h2 class="text-center">Login</h2>
+            <form method="post" action="/login">
+                <div class="form-group">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="username">Email </label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Enter your EmailID" required>
+              </div>
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="password">Confirm Password</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Confirm your password" required>
+              </div>
+                <button type="submit" class="login-button">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
